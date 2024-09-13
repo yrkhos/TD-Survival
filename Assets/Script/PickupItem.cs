@@ -9,12 +9,20 @@ public class PickupItem : MonoBehaviour
 
     public PickupBehaviour playerPickupBehaviour;
 
+    [SerializeField]
+    private GameObject pickupText;
+
+    [SerializeField]
+    private LayerMask layerMask;
+
     void Update()
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(transform.position, transform.forward, out hit, pickupRange))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, pickupRange, layerMask))
         {
+            pickupText.SetActive(true);
+
             if (Input.GetKeyDown(KeyCode.F))
             {
                 if (hit.transform.CompareTag("Item"))
@@ -22,6 +30,10 @@ public class PickupItem : MonoBehaviour
                     playerPickupBehaviour.DoPickup(hit.transform.gameObject.GetComponent<Item>());
                 }
             }
+        }
+        else
+        {
+            pickupText.SetActive(false);
         }
     }
 

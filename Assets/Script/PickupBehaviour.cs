@@ -11,6 +11,11 @@ public class PickupBehaviour : MonoBehaviour
 
     public void DoPickup(Item item)
     {
+        if (inventory.IsFull())
+        {
+            return;
+        }
+
         inventory.AddItem(item.itemData);
         Destroy(item.gameObject);
     }
