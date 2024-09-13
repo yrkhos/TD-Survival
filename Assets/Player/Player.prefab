@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2324176040178912581}
   - component: {fileID: 9035446526983043447}
   - component: {fileID: 1055358553638736419}
+  - component: {fileID: 1332680041940598830}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -35,7 +36,7 @@ Transform:
   m_Children:
   - {fileID: 6760078166953383935}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8293641698975942597
 MeshFilter:
@@ -154,6 +155,19 @@ MonoBehaviour:
   courir: 5
   arriere: 3
   cote: 3
+--- !u!114 &1332680041940598830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1008842089403816956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 784033c040bbfa4418a089eb9887fccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 0}
 --- !u!1 &5909698218228758685
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,6 +181,7 @@ GameObject:
   - component: {fileID: 5703679010820974720}
   - component: {fileID: 4698211003493102312}
   - component: {fileID: 6943070972506687319}
+  - component: {fileID: 5276392005815060856}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -304,5 +319,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6285e9cd5e7fa48ab0cd1242f7c575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 100
+  mouseSensitivity: 400
   playerBody: {fileID: 3019568755237715636}
+--- !u!114 &5276392005815060856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5909698218228758685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b18cc5a02e671b44b59a9e09436a3da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupRange: 2.6
+  playerPickupBehaviour: {fileID: 0}
