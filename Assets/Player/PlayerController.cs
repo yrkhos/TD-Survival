@@ -19,13 +19,13 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        if(Instance != null)
+        /*if(Instance != null)
         {
             Destroy(this.gameObject);
             return;
         }
         Instance = this;
-        GameObject.DontDestroyOnLoad(this.gameObject);
+        GameObject.DontDestroyOnLoad(this.gameObject);*/
 
         //Cursor.lockState = CursorLockMode.Locked;
         //anim = gameObject.GetComponent<Animator>();

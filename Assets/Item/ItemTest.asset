@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: ItemTest
   m_EditorClassIdentifier: 
   nom: ItemTest
+  description: Un Test de Code !
   visual: {fileID: 21300000, guid: 3b1da6e4a1e9f464b9915e91ef39e257, type: 3}
   prefab: {fileID: 4879862435692793488, guid: b0f7dd6700ff39348b9c3cef5b2b511e, type: 3}
