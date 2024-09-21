@@ -20,4 +20,9 @@ public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     {
         TooltipSystem.instance.Hide();
     }
+
+    public void ClickOnSlot()
+    {
+        Inventory.instance.OpenActionPanel(item);
+    }
 }

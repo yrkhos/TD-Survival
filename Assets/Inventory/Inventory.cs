@@ -16,9 +16,33 @@ public class Inventory : MonoBehaviour
 
     const int InventorySize = 16;
 
+    [Header("Action Panel References")]
+
+    [SerializeField]
+    private GameObject actionPanel;
+
+    [SerializeField]
+    private GameObject useItemButton;
+
+    [SerializeField]
+    private GameObject equipItemButton;
+
+    [SerializeField]
+    private GameObject dropItemButton;
+
+    [SerializeField]
+    private GameObject destroyItemButton;
+
+    public static Inventory instance;
+
     private void Start()
     {
         RefreshContent();
+    }
+
+    private void Awake()
+    {
+        instance = this;
     }
 
     public void AddItem(ItemData item)
@@ -54,5 +78,26 @@ public class Inventory : MonoBehaviour
     public bool IsFull()
     {
         return InventorySize == content.Count;
+    }
+
+    public void OpenActionPanel(ItemData item)
+    {
+        switch (item.itemType)
+        {
+            case ItemType.Ressource:
+                useItemButton.SetActive(false);
+                equipItemButton.SetActive(false);
+                break;
+            case ItemType.Equipement:
+                useItemButton.SetActive(false);
+                equipItemButton.SetActive(true);
+                break;
+            case ItemType.Consommable:
+                useItemButton.SetActive(true);
+                equipItemButton.SetActive(false);
+                break;
+        }
+
+        actionPanel.SetActive(true);
     }
 }
