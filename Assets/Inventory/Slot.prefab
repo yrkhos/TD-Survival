@@ -122,7 +122,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8274752197801667089}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -1375980764330698189}
+        m_TargetAssemblyTypeName: TooltipTrigger, Assembly-CSharp
+        m_MethodName: ClickOnSlot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &-1375980764330698189
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public ItemData item;
     public Image itemVisual;
@@ -23,6 +23,6 @@ public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     public void ClickOnSlot()
     {
-        Inventory.instance.OpenActionPanel(item);
+        Inventory.instance.OpenActionPanel(item, transform.position);
     }
 }

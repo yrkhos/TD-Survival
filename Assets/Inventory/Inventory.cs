@@ -33,6 +33,14 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     private GameObject destroyItemButton;
 
+    private ItemData itemCurrentlySelected;
+
+    [SerializeField]
+    private Sprite transparenteTexture;
+
+    [SerializeField]
+    private Transform drop;
+
     public static Inventory instance;
 
     private void Start()
@@ -66,9 +74,17 @@ public class Inventory : MonoBehaviour
 
     private void RefreshContent()
     {
+        for (int i = 0; i < inventorySlotsParent.childCount; i++)
+        {
+            Slot currentSlot = inventorySlotsParent.GetChild(i).GetComponent<Slot>();
+
+            currentSlot.item = null;
+            currentSlot.itemVisual.sprite = transparenteTexture;
+        }
+
         for (int i = 0; i < content.Count; i++)
         {
-            TooltipTrigger currentSlot = inventorySlotsParent.GetChild(i).GetComponent<TooltipTrigger>();
+            Slot currentSlot = inventorySlotsParent.GetChild(i).GetComponent<Slot>();
 
             currentSlot.item = content[i];
             currentSlot.itemVisual.sprite = content[i].visual;
@@ -80,8 +96,16 @@ public class Inventory : MonoBehaviour
         return InventorySize == content.Count;
     }
 
-    public void OpenActionPanel(ItemData item)
+    public void OpenActionPanel(ItemData item, Vector3 slotPosition)
     {
+        itemCurrentlySelected = item;
+
+        if (item == null)
+        {
+            actionPanel.SetActive(false);
+            return;
+        }
+
         switch (item.itemType)
         {
             case ItemType.Ressource:
@@ -98,6 +122,41 @@ public class Inventory : MonoBehaviour
                 break;
         }
 
+        actionPanel.transform.position = slotPosition;
         actionPanel.SetActive(true);
+    }
+
+    public void CloseActionPanel()
+    {
+        actionPanel.SetActive(false);
+        itemCurrentlySelected = null;
+    }
+
+    public void UseActionButton()
+    {
+        print("Use item :" + itemCurrentlySelected.name);
+        CloseActionPanel();
+    }
+
+    public void EquipActionButton()
+    {
+        print("Equip item :" + itemCurrentlySelected.name);
+        CloseActionPanel();
+    }
+
+    public void DropActionButton()
+    {
+        GameObject instantiatedItem = Instantiate(itemCurrentlySelected.prefab);
+        instantiatedItem.transform.position = drop.position;
+        content.Remove(itemCurrentlySelected);
+        RefreshContent();
+        CloseActionPanel();
+    }
+
+    public void DestroyActionButton()
+    {
+        content.Remove(itemCurrentlySelected);
+        RefreshContent();
+        CloseActionPanel();
     }
 }
