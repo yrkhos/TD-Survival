@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class Tooltip : MonoBehaviour
 {
     [SerializeField]
@@ -11,7 +10,7 @@ public class Tooltip : MonoBehaviour
 
     [SerializeField]
     private Text contentField;
-
+    
     [SerializeField]
     private LayoutElement layoutElement;
 
@@ -35,10 +34,10 @@ public class Tooltip : MonoBehaviour
 
         contentField.text = content;
 
-        int headerLenght = headerField.text.Length;
-        int contentLenght = contentField.text.Length;
+        int headerLength = headerField.text.Length;
+        int contentLength = contentField.text.Length;
 
-        layoutElement.enabled = (headerLenght > maxCharacter || contentLenght > maxCharacter) ? true : false;
+        layoutElement.enabled = (headerLength > maxCharacter || contentLength > maxCharacter) ? true : false;
     }
 
     private void Update()
@@ -52,4 +51,5 @@ public class Tooltip : MonoBehaviour
 
         transform.position = mousePosition;
     }
+
 }

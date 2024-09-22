@@ -5,29 +5,43 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Item", menuName = "Items/New item")]
 public class ItemData : ScriptableObject
 {
+    [Header("Data")]
     public string nom;
     public string description;
     public Sprite visual;
     public GameObject prefab;
+    public bool stackable;
+    public int maxStack;
 
+    [Header("Effects")]
+    public float healthEffect;
+    public float hungerEffect;
+    public float thirstEffect;
+
+    [Header("Armor Stats")]
+    public float armorPoints;
+
+    [Header("Attack Stats")]
+    public float attackPoints;
+
+    [Header("Types")]
     public ItemType itemType;
-    public EquipementType equipementType;
+    public EquipmentType equipmentType;
 }
 
 public enum ItemType
 {
     Ressource,
-    Consommable,
-    Equipement
+    Equipment,
+    Consumable
 }
 
-public enum EquipementType
+public enum EquipmentType
 {
-    Casque,
-    Torse,
-    Gants,
-    Jambiere,
-    Bottes,
-    Arme,
-    Outil
+    Head,
+    Chest,
+    Hands,
+    Legs,
+    Feet,
+    Weapon
 }

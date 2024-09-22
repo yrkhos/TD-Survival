@@ -11,5 +11,6 @@ public class EquipmentLibrary : MonoBehaviour
 public class EquipmentLibraryItem
 {
     public ItemData itemData;
-    public GameObject itemPregab;
+    public GameObject itemPrefab;
+    public GameObject[] elementsToDisable;
 }
