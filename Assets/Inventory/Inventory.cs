@@ -47,6 +47,8 @@ public class Inventory : MonoBehaviour
 
     public static Inventory instance;
 
+    private bool isOpen = false;
+
     private void Start()
     {
         RefreshContent();
@@ -67,13 +69,29 @@ public class Inventory : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
-            inventoryPanel.SetActive(!inventoryPanel.activeSelf);
+            if (isOpen)
+            {
+                CloseInventory();
+            }
+            else
+            {
+                OpenInventory();
+            }
         }
+    }
+
+    private void OpenInventory()
+    {
+        inventoryPanel.SetActive(true);
+        isOpen = true;
     }
 
     public void CloseInventory()
     {
         inventoryPanel.SetActive(false);
+        actionPanel.SetActive(false);
+        TooltipSystem.instance.Hide();
+        isOpen = false;
     }
 
     private void RefreshContent()
