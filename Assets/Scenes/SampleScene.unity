@@ -1624,6 +1624,7 @@ MonoBehaviour:
   destroyItemButton: {fileID: 447628016}
   transparenteTexture: {fileID: 21300000, guid: cc8ad5b9fa045304fa4ce8d9b69fb5da, type: 3}
   drop: {fileID: 459226271}
+  equipmentLibrary: {fileID: 684881284}
 --- !u!4 &613897508
 Transform:
   m_ObjectHideFlags: 0
@@ -1746,6 +1747,7 @@ GameObject:
   - component: {fileID: 684881281}
   - component: {fileID: 684881282}
   - component: {fileID: 684881283}
+  - component: {fileID: 684881284}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1797,6 +1799,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltip: {fileID: 141627732}
+--- !u!114 &684881284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684881280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d771e2bbc9487344993b4662f54646e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  content:
+  - itemData: {fileID: 11400000, guid: 0aae76194ec12ef4596ab4fff95634f7, type: 2}
+    itemPregab: {fileID: 1922623407919751297}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -5005,13 +5022,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8303812243091311198, guid: 6bf082be317fdd94a9cee11b2ad08caf, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bf082be317fdd94a9cee11b2ad08caf, type: 3}
+--- !u!1 &1922623407919751297 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7207961797737682518, guid: 6bf082be317fdd94a9cee11b2ad08caf, type: 3}
+  m_PrefabInstance: {fileID: 1922623407919751296}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6427339396339652716
 PrefabInstance:
   m_ObjectHideFlags: 0
