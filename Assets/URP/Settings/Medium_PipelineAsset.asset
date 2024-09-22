@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf2edee5c58d82540a51f03df9d42094, type: 3}
-  m_Name: Low_PipelineAsset
+  m_Name: Medium_PipelineAsset
   m_EditorClassIdentifier: 
   k_AssetVersion: 11
   k_AssetPreviousVersion: 11
   m_RendererType: 1
   m_RendererData: {fileID: 0}
   m_RendererDataList:
-  - {fileID: 11400000, guid: dba1476e23b3e424abb3adb75b540377, type: 2}
+  - {fileID: 11400000, guid: 5e230b8b4cb2ea54d84732f119b94adc, type: 2}
   m_DefaultRendererIndex: 0
   m_RequireDepthTexture: 0
   m_RequireOpaqueTexture: 0
@@ -33,12 +33,12 @@ MonoBehaviour:
   m_EnableLODCrossFade: 1
   m_LODCrossFadeDitheringType: 1
   m_ShEvalMode: 0
-  m_MainLightRenderingMode: 0
-  m_MainLightShadowsSupported: 0
+  m_MainLightRenderingMode: 1
+  m_MainLightShadowsSupported: 1
   m_MainLightShadowmapResolution: 1024
-  m_AdditionalLightsRenderingMode: 2
-  m_AdditionalLightsPerObjectLimit: 4
-  m_AdditionalLightShadowsSupported: 0
+  m_AdditionalLightsRenderingMode: 1
+  m_AdditionalLightsPerObjectLimit: 1
+  m_AdditionalLightShadowsSupported: 1
   m_AdditionalLightsShadowmapResolution: 1024
   m_AdditionalLightsShadowResolutionTierLow: 256
   m_AdditionalLightsShadowResolutionTierMedium: 512
@@ -53,7 +53,7 @@ MonoBehaviour:
   m_CascadeBorder: 0.2
   m_ShadowDepthBias: 1
   m_ShadowNormalBias: 1
-  m_AnyShadowsSupported: 0
+  m_AnyShadowsSupported: 1
   m_SoftShadowsSupported: 0
   m_ConservativeEnclosingSphere: 0
   m_NumIterationsEnclosingSphere: 64

@@ -6,6 +6,8 @@ using System.Linq;
 
 public class Inventory : MonoBehaviour
 {
+    [Header("Inventory Panel References")]
+
     [SerializeField]
     private List<ItemData> content = new List<ItemData>();
 
@@ -15,7 +17,10 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     private Transform inventorySlotsParent;
 
-    const int InventorySize = 16;
+    [SerializeField]
+    private Transform drop;
+
+    const int InventorySize = 20;
 
     [Header("Action Panel References")]
 
@@ -39,8 +44,7 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     private Sprite transparenteTexture;
 
-    [SerializeField]
-    private Transform drop;
+    [Header("Script equipment Panel References")]
 
     [SerializeField]
     private EquipmentLibrary equipmentLibrary;
@@ -48,6 +52,31 @@ public class Inventory : MonoBehaviour
     public static Inventory instance;
 
     private bool isOpen = false;
+
+    [Header("Armures Panel References")]
+
+    [SerializeField]
+    private Image CasqueSlotImage;
+
+    [SerializeField]
+    private Image TorseSlotImage;
+
+    [SerializeField]
+    private Image GantsSlotImage;
+
+    [SerializeField]
+    private Image PantalonSlotImage;
+
+    [SerializeField]
+    private Image BottesSlotImage;
+
+    [Header("Amements & Outils Panel References")]
+
+    [SerializeField]
+    private Image ArmeSlotImage;
+
+    [SerializeField]
+    private Image OutilsSlotImage;
 
     private void Start()
     {
@@ -162,6 +191,7 @@ public class Inventory : MonoBehaviour
 
     public void EquipActionButton()
     {
+
         print("Equip item :" + itemCurrentlySelected.name);
 
         EquipmentLibraryItem equipmentLibraryItem = equipmentLibrary.content.Where(elem => elem.itemData == itemCurrentlySelected).First();
@@ -169,6 +199,31 @@ public class Inventory : MonoBehaviour
         if(equipmentLibraryItem != null)
         {
             equipmentLibraryItem.itemPregab.SetActive(true);
+
+            switch (itemCurrentlySelected.equipementType)
+            {
+                case EquipementType.Casque:
+                    CasqueSlotImage.sprite = itemCurrentlySelected.visual;
+                    break;
+
+                case EquipementType.Torse:
+                    TorseSlotImage.sprite = itemCurrentlySelected.visual;
+                    break;
+
+                case EquipementType.Gants:
+                    GantsSlotImage.sprite = itemCurrentlySelected.visual;
+                    break;
+
+                case EquipementType.Jambiere:
+                    PantalonSlotImage.sprite = itemCurrentlySelected.visual;
+                    break;
+
+                case EquipementType.Bottes:
+                    BottesSlotImage.sprite = itemCurrentlySelected.visual;
+                    break;
+            }
+            content.Remove(itemCurrentlySelected);
+            RefreshContent();
         }
         else
         {

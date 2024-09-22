@@ -23,11 +23,11 @@ public enum ItemType
 
 public enum EquipementType
 {
-    Tete,
+    Casque,
     Torse,
     Gants,
     Jambiere,
-    Chaussure,
+    Bottes,
     Arme,
     Outil
 }
