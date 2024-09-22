@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2324176040178912581}
   - component: {fileID: 9035446526983043447}
   - component: {fileID: 1055358553638736419}
-  - component: {fileID: 1332680041940598830}
+  - component: {fileID: 5347207330646700361}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -156,7 +156,7 @@ MonoBehaviour:
   courir: 5
   arriere: 3
   cote: 3
---- !u!114 &1332680041940598830
+--- !u!114 &5347207330646700361
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,10 +165,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1008842089403816956}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 784033c040bbfa4418a089eb9887fccc, type: 3}
+  m_Script: {fileID: 11500000, guid: 67311b8b6e2c538488ddbc61386e961c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
+  maxHealth: 100
+  currentHealth: 0
+  healthBarFill: {fileID: 0}
+  healthDecreaseRateForHungerAndThirst: 0
+  maxHunger: 100
+  currentHunger: 0
+  hungerBarFill: {fileID: 0}
+  hungerDecreaseRate: 0
+  maxThirst: 100
+  currentThirst: 0
+  thirstBarFill: {fileID: 0}
+  thirstDecreaseRate: 0
+  currentArmorPoints: 0
+  isDead: 0
 --- !u!1 &5367510541763686102
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,7 +300,7 @@ GameObject:
   - component: {fileID: 5703679010820974720}
   - component: {fileID: 4698211003493102312}
   - component: {fileID: 6943070972506687319}
-  - component: {fileID: 5276392005815060856}
+  - component: {fileID: 9215648525326606383}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -428,7 +441,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 400
   playerBody: {fileID: 3019568755237715636}
---- !u!114 &5276392005815060856
+--- !u!114 &9215648525326606383
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -437,15 +450,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 5909698218228758685}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b18cc5a02e671b44b59a9e09436a3da, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a467f30c23b0f848969ffdafcc1c179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupRange: 2.8
-  playerPickupBehaviour: {fileID: 1332680041940598830}
-  pickupText: {fileID: 0}
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 64
+  equipment: {fileID: 0}
+  playerStats: {fileID: 0}
+  actionPanel: {fileID: 0}
+  dropPoint: {fileID: 0}
+  useItemButton: {fileID: 0}
+  equipItemButton: {fileID: 0}
+  dropItemButton: {fileID: 0}
+  destroyItemButton: {fileID: 0}
+  itemCurrentlySelected: {fileID: 0}
 --- !u!1 &7207961797737682518
 GameObject:
   m_ObjectHideFlags: 0

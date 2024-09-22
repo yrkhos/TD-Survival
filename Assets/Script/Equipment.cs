@@ -67,12 +67,6 @@ public class Equipment : MonoBehaviour
     [SerializeField]
     private Button weaponSlotDesequipButton;
 
-    [SerializeField]
-    private AudioSource audioSource;
-
-    [SerializeField]
-    private AudioClip equipSound;
-
     private void DisablePreviousEquipedEquipment(ItemData itemToDisable)
     {
         if (itemToDisable == null)
@@ -254,7 +248,6 @@ public class Equipment : MonoBehaviour
 
             Inventory.instance.RemoveItem(itemToEquip);
 
-            audioSource.PlayOneShot(equipSound);
         }
         else
         {

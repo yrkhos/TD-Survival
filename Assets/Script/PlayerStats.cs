@@ -3,10 +3,6 @@ using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
-    [Header("Other elements references")]
-    [SerializeField]
-    private Animator animator;
-
     [Header("Health")]
     
     [SerializeField]
@@ -89,8 +85,6 @@ public class PlayerStats : MonoBehaviour
         // On bloque la diminution des barres de faim et soif
         hungerDecreaseRate = 0;
         thirstDecreaseRate = 0;
-
-        animator.SetTrigger("Die");
     }
 
     public void ConsumeItem(float health, float hunger, float thirst)

@@ -34,7 +34,7 @@ public class Inventory : MonoBehaviour
     public static Inventory instance;
 
 
-    const int InventorySize = 24;
+    const int InventorySize = 20;
     private bool isOpen = false;
 
     private void Awake()

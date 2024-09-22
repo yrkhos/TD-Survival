@@ -16,5 +16,12 @@ MonoBehaviour:
   description: "Un fusil d'assault de maigre qualit\xE9."
   visual: {fileID: 21300000, guid: a48b1236efc21304bb6f3411d30b5b2f, type: 3}
   prefab: {fileID: 8786723236735009238, guid: 2530108c56a5c4548b95e21266385ba6, type: 3}
-  itemType: 2
-  equipementType: 5
+  stackable: 0
+  maxStack: 1
+  healthEffect: 0
+  hungerEffect: 0
+  thirstEffect: 0
+  armorPoints: 0
+  attackPoints: 5
+  itemType: 1
+  equipmentType: 5
