@@ -10,10 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b92bdabc06eb7d43a218df15573f3cf, type: 3}
-  m_Name: ItemTest
+  m_Name: Bois
   m_EditorClassIdentifier: 
-  nom: ItemTest
-  description: Un Test de Code !
-  visual: {fileID: 21300000, guid: 3b1da6e4a1e9f464b9915e91ef39e257, type: 3}
-  prefab: {fileID: 4879862435692793488, guid: b0f7dd6700ff39348b9c3cef5b2b511e, type: 3}
-  itemType: 1
+  nom: Bois
+  description: 
+  visual: {fileID: 21300000, guid: d63355e4fa9807942b9455978a0017b7, type: 3}
+  prefab: {fileID: 8776621786032508051, guid: 8e1ea1b75b83b014dae0e5a0969597c9, type: 3}
+  stackable: 1
+  maxStack: 99
+  healthEffect: 0
+  hungerEffect: 0
+  thirstEffect: 0
+  armorPoints: 0
+  attackPoints: 0
+  itemType: 0
+  equipmentType: 0

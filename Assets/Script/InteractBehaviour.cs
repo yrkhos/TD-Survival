@@ -7,9 +7,6 @@ public class InteractBehaviour : MonoBehaviour
     [Header("References")]
 
     [SerializeField]
-    private Animator playerAnimator;
-
-    [SerializeField]
     private Inventory inventory;
 
     [SerializeField]
@@ -17,9 +14,6 @@ public class InteractBehaviour : MonoBehaviour
 
     [SerializeField]
     private EquipmentLibrary equipmentLibrary;
-
-    [SerializeField]
-    private AudioSource audioSource;
 
     [HideInInspector]
     public bool isBusy = false;
@@ -29,17 +23,9 @@ public class InteractBehaviour : MonoBehaviour
     private GameObject pickaxeVisual;
 
     [SerializeField]
-    private AudioClip pickaxeSound;
-
-    [SerializeField]
     private GameObject axeVisual;
 
-    [SerializeField]
-    private AudioClip axeSound;
-
     [Header("Other")]
-    [SerializeField]
-    private AudioClip pickupSound;
 
     private Item currentItem;
     private Harvestable currentHarvestable;
@@ -63,8 +49,6 @@ public class InteractBehaviour : MonoBehaviour
         }
 
         currentItem = item;
-
-        playerAnimator.SetTrigger("Pickup");
     }
 
     public void DoHarvest(Harvestable harvestable)
@@ -80,7 +64,6 @@ public class InteractBehaviour : MonoBehaviour
         EnableToolGameObjectFromEnum(currentTool);
 
         currentHarvestable = harvestable;
-        playerAnimator.SetTrigger("Harvest");
     }
 
     // Coroutine appelée depuis l'animation "Harvesting"
@@ -117,7 +100,6 @@ public class InteractBehaviour : MonoBehaviour
     public void AddItemToInventory()
     {
         inventory.AddItem(currentItem.itemData);
-        audioSource.PlayOneShot(pickupSound);
         Destroy(currentItem.gameObject);
     }
 
@@ -145,17 +127,10 @@ public class InteractBehaviour : MonoBehaviour
         {
             case Tool.Pickaxe:
                 pickaxeVisual.SetActive(enabled);
-                audioSource.clip = pickaxeSound;
                 break;
             case Tool.Axe:
                 axeVisual.SetActive(enabled);
-                audioSource.clip = axeSound;
                 break;
         }
-    }
-
-    public void PlayHarvestingSoundEffect()
-    {
-        audioSource.Play();
     }
 }

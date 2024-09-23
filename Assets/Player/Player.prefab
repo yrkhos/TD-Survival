@@ -37,7 +37,7 @@ Transform:
   - {fileID: 6760078166953383935}
   - {fileID: 5299239253135832594}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8293641698975942597
 MeshFilter:
@@ -300,7 +300,6 @@ GameObject:
   - component: {fileID: 5703679010820974720}
   - component: {fileID: 4698211003493102312}
   - component: {fileID: 6943070972506687319}
-  - component: {fileID: 9215648525326606383}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -441,27 +440,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 400
   playerBody: {fileID: 3019568755237715636}
---- !u!114 &9215648525326606383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5909698218228758685}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a467f30c23b0f848969ffdafcc1c179, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  equipment: {fileID: 0}
-  playerStats: {fileID: 0}
-  actionPanel: {fileID: 0}
-  dropPoint: {fileID: 0}
-  useItemButton: {fileID: 0}
-  equipItemButton: {fileID: 0}
-  dropItemButton: {fileID: 0}
-  destroyItemButton: {fileID: 0}
-  itemCurrentlySelected: {fileID: 0}
 --- !u!1 &7207961797737682518
 GameObject:
   m_ObjectHideFlags: 0
