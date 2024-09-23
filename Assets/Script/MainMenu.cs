@@ -31,6 +31,7 @@ public class MainMenu : MonoBehaviour
 
     public static bool loadSavedData;
 
+    [System.Obsolete]
     void Start()
     {
         // Initialisation du slider de volume

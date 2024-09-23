@@ -15,9 +15,6 @@ public class InteractBehaviour : MonoBehaviour
     [SerializeField]
     private EquipmentLibrary equipmentLibrary;
 
-    [HideInInspector]
-    public bool isBusy = false;
-
     [Header("Tools Configuration")]
     [SerializeField]
     private GameObject pickaxeVisual;
@@ -35,30 +32,18 @@ public class InteractBehaviour : MonoBehaviour
 
     public void DoPickup(Item item)
     {
-        if(isBusy)
-        {
-            return;
-        }
-
-        isBusy = true;
 
         if(inventory.IsFull())
         {
-            Debug.Log("Inventory full, can't pick up : " + item.name);
             return;
         }
 
-        currentItem = item;
+        inventory.AddItem(item.itemData);
+        Destroy(item.gameObject);
     }
 
     public void DoHarvest(Harvestable harvestable)
     {
-        if (isBusy)
-        {
-            return;
-        }
-
-        isBusy = true;
 
         currentTool = harvestable.tool;
         EnableToolGameObjectFromEnum(currentTool);
@@ -106,7 +91,6 @@ public class InteractBehaviour : MonoBehaviour
     public void ReEnablePlayerMovement()
     {
         EnableToolGameObjectFromEnum(currentTool, false);
-        isBusy = false;
     }
 
     private void EnableToolGameObjectFromEnum(Tool toolType, bool enabled = true)

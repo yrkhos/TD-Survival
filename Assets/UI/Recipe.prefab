@@ -356,8 +356,8 @@ MonoBehaviour:
   craftButton: {fileID: 7590995455536729626}
   canBuildIcon: {fileID: 21300000, guid: f1d368605e67aff45ace16acb9da81a5, type: 3}
   cantBuildIcon: {fileID: 21300000, guid: e91c21f9d65c28b43b840687fd31c09d, type: 3}
-  missingColor: {r: 0, g: 1, b: 0.038576365, a: 1}
-  availableColor: {r: 1, g: 0, b: 0, a: 1}
+  missingColor: {r: 1, g: 0, b: 0.093779564, a: 1}
+  availableColor: {r: 0.074186325, g: 1, b: 0, a: 1}
 --- !u!1 &8427827415902881680
 GameObject:
   m_ObjectHideFlags: 0

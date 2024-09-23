@@ -1685,8 +1685,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 613897507}
-        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+      - m_Target: {fileID: 613897510}
+        m_TargetAssemblyTypeName: ItemActionsSystem, Assembly-CSharp
         m_MethodName: CloseActionPanel
         m_Mode: 1
         m_Arguments:
@@ -1963,8 +1963,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 613897507}
-        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+      - m_Target: {fileID: 613897510}
+        m_TargetAssemblyTypeName: ItemActionsSystem, Assembly-CSharp
         m_MethodName: DestroyActionButton
         m_Mode: 1
         m_Arguments:
@@ -2697,8 +2697,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 613897507}
-        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+      - m_Target: {fileID: 613897510}
+        m_TargetAssemblyTypeName: ItemActionsSystem, Assembly-CSharp
         m_MethodName: DropActionButton
         m_Mode: 1
         m_Arguments:
@@ -6156,9 +6156,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55c39f719de02a944b02e015848c9ab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sizeX: 7.2
-  sizeY: 6
-  sizeZ: 7.2
+  sizeX: 1
+  sizeY: 1
+  sizeZ: 1
 --- !u!1 &1644992693
 GameObject:
   m_ObjectHideFlags: 0
@@ -6452,8 +6452,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 613897507}
-        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+      - m_Target: {fileID: 613897510}
+        m_TargetAssemblyTypeName: ItemActionsSystem, Assembly-CSharp
         m_MethodName: UseActionButton
         m_Mode: 1
         m_Arguments:
@@ -6766,7 +6766,8 @@ Transform:
   m_LocalPosition: {x: 20.927948, y: 2.206836, z: 23.914793}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1608704137641348726}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7558,8 +7559,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 613897507}
-        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+      - m_Target: {fileID: 613897510}
+        m_TargetAssemblyTypeName: ItemActionsSystem, Assembly-CSharp
         m_MethodName: EquipActionButton
         m_Mode: 1
         m_Arguments:
@@ -7971,6 +7972,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f2419d4cb7cd1e4fb59ff05b0e1aa75, type: 3}
+--- !u!4 &1608704137641348726 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4320420689211163607, guid: e90de6cd0f23ccb4d9c02b25b8e146d0, type: 3}
+  m_PrefabInstance: {fileID: 5250514424639780534}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1922623407919751296
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8421,6 +8427,67 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3002467818670624669, guid: 06a5c3e9039f50d4c81e2a9fd63e0c0d, type: 3}
   m_PrefabInstance: {fileID: 3000483582831507643}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5250514424639780534
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1888083806}
+    m_Modifications:
+    - target: {fileID: 4320420689211163607, guid: e90de6cd0f23ccb4d9c02b25b8e146d0, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320420689211163607, guid: e90de6cd0f23ccb4d9c02b25b8e146d0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.0882988
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320420689211163607, guid: e90de6cd0f23ccb4d9c02b25b8e146d0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.952836
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320420689211163607, guid: e90de6cd0f23ccb4d9c02b25b8e146d0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.3196163
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320420689211163607, guid: e90de6cd0f23ccb4d9c02b25b8e146d0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320420689211163607, guid: e90de6cd0f23ccb4d9c02b25b8e146d0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320420689211163607, guid: e90de6cd0f23ccb4d9c02b25b8e146d0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320420689211163607, guid: e90de6cd0f23ccb4d9c02b25b8e146d0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320420689211163607, guid: e90de6cd0f23ccb4d9c02b25b8e146d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320420689211163607, guid: e90de6cd0f23ccb4d9c02b25b8e146d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320420689211163607, guid: e90de6cd0f23ccb4d9c02b25b8e146d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8829586364176989039, guid: e90de6cd0f23ccb4d9c02b25b8e146d0, type: 3}
+      propertyPath: m_Name
+      value: CoffreLootBois
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e90de6cd0f23ccb4d9c02b25b8e146d0, type: 3}
 --- !u!1001 &6427339396339652716
 PrefabInstance:
   m_ObjectHideFlags: 0

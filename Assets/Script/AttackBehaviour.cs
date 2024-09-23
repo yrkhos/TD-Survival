@@ -62,7 +62,7 @@ public class AttackBehaviour : MonoBehaviour
         - Ne pas être en train d'attaquer
         - Ne pas avoir l'inventaire ouvert
         */
-        return equipmentSystem.equipedWeaponItem != null && !isAttacking && !uiManager.atLeastOnePanelOpened && !interactBehaviour.isBusy;
+        return equipmentSystem.equipedWeaponItem != null && !isAttacking && !uiManager.atLeastOnePanelOpened && !interactBehaviour;
     }
 
     public void AttackFinished()

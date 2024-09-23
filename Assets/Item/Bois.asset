@@ -15,7 +15,7 @@ MonoBehaviour:
   nom: Bois
   description: 
   visual: {fileID: 21300000, guid: d63355e4fa9807942b9455978a0017b7, type: 3}
-  prefab: {fileID: 8776621786032508051, guid: 8e1ea1b75b83b014dae0e5a0969597c9, type: 3}
+  prefab: {fileID: 8829586364176989039, guid: e90de6cd0f23ccb4d9c02b25b8e146d0, type: 3}
   stackable: 1
   maxStack: 99
   healthEffect: 0

@@ -305,7 +305,6 @@ MonoBehaviour:
   inventory: {fileID: 0}
   equipmentSystem: {fileID: 0}
   equipmentLibrary: {fileID: 0}
-  isBusy: 0
   pickaxeVisual: {fileID: 132003604242166232}
   axeVisual: {fileID: 8669335303538339354}
 --- !u!1 &1605283406196987902
@@ -333,7 +332,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605283406196987902}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.647, z: 2.73}
+  m_LocalPosition: {x: 0, y: -0.647, z: 4.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -356,7 +355,7 @@ MonoBehaviour:
   placedStructuresParent: {fileID: 0}
   structures:
   - placementPrefab: {fileID: 0}
-    instantiatedPrefab: {fileID: 8089857951165522450, guid: 3c44fa1dd11633745b5d75125cc55f0c, type: 3}
+    instantiatedPrefab: {fileID: 7898995137756771025, guid: 3c44fa1dd11633745b5d75125cc55f0c, type: 3}
     structureType: 1
     ressourcesCost:
     - itemData: {fileID: 11400000, guid: 3227a09274cb9e449a2405d5273b8542, type: 2}
@@ -751,7 +750,7 @@ MonoBehaviour:
   interactText: {fileID: 0}
   layerMask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 64
 --- !u!1 &7207961797737682518
 GameObject:
   m_ObjectHideFlags: 0
