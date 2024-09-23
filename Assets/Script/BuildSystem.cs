@@ -23,12 +23,6 @@ public class BuildSystem : MonoBehaviour
     [SerializeField]
     private Transform rotationRef;
 
-    [SerializeField]
-    private AudioSource audioSource;
-
-    [SerializeField]
-    private AudioClip buildingSound;
-
     [Header("UI References")]
     [SerializeField]
     private Transform buildSystemUIPanel;
@@ -68,24 +62,24 @@ public class BuildSystem : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-            if(currentStructure.structureType == StructureType.Stairs && systemEnabled)
+            if(currentStructure.structureType == StructureType.Wall && systemEnabled)
             {
                 DisableSystem();
             } else
             {
-                ChangeStructureType(GetStructureByType(StructureType.Stairs));
+                ChangeStructureType(GetStructureByType(StructureType.Wall));
             }
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            if (currentStructure.structureType == StructureType.Wall && systemEnabled)
+            if (currentStructure.structureType == StructureType.Stairs && systemEnabled)
             {
                 DisableSystem();
             }
             else
             {
-                ChangeStructureType(GetStructureByType(StructureType.Wall));
+                ChangeStructureType(GetStructureByType(StructureType.Stairs));
             }
         }
 
@@ -117,8 +111,6 @@ public class BuildSystem : MonoBehaviour
         Instantiate(currentStructure.instantiatedPrefab, currentStructure.placementPrefab.transform.position, currentStructure.placementPrefab.transform.GetChild(0).transform.rotation, placedStructuresParent);
 
         placedStructures.Add(new PlacedStructure { prefab = currentStructure.instantiatedPrefab, positions = currentStructure.placementPrefab.transform.position, rotations = currentStructure.placementPrefab.transform.GetChild(0).transform.rotation.eulerAngles });
-
-        audioSource.PlayOneShot(buildingSound);
 
         for (int i = 0; i < currentStructure.ressourcesCost.Length; i++)
         {

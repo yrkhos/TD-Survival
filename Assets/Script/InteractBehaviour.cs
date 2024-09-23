@@ -115,11 +115,6 @@ public class InteractBehaviour : MonoBehaviour
 
         if (equipmentLibraryItem != null)
         {
-            for (int i = 0; i < equipmentLibraryItem.elementsToDisable.Length; i++)
-            {
-                equipmentLibraryItem.elementsToDisable[i].SetActive(enabled);
-            }
-
             equipmentLibraryItem.itemPrefab.SetActive(!enabled);
         }
 

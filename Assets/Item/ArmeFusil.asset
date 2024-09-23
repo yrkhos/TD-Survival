@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b92bdabc06eb7d43a218df15573f3cf, type: 3}
-  m_Name: Fusil
+  m_Name: ArmeFusil
   m_EditorClassIdentifier: 
-  nom: Fusil
-  description: "Un fusil d'assault de maigre qualit\xE9."
+  nom: "Arme \xE0 feu"
+  description: 
   visual: {fileID: 21300000, guid: a48b1236efc21304bb6f3411d30b5b2f, type: 3}
   prefab: {fileID: 8776621786032508051, guid: 5a3e8a4b075c87b4d8d4b1463b7a7ecb, type: 3}
   stackable: 0
@@ -22,6 +22,6 @@ MonoBehaviour:
   hungerEffect: 0
   thirstEffect: 0
   armorPoints: 0
-  attackPoints: 5
+  attackPoints: 0
   itemType: 1
   equipmentType: 5

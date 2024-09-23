@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ec25d19f83c90641948a64655ba231f, type: 3}
   m_Name: Fusil
   m_EditorClassIdentifier: 
-  craftableItem: {fileID: 11400000, guid: 0aae76194ec12ef4596ab4fff95634f7, type: 2}
+  craftableItem: {fileID: 11400000, guid: 6a3a0c2f8ad937c47b69f1c50b5bb862, type: 2}
   requiredItems:
   - itemData: {fileID: 11400000, guid: 3227a09274cb9e449a2405d5273b8542, type: 2}
     count: 1

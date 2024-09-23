@@ -12,5 +12,4 @@ public class EquipmentLibraryItem
 {
     public ItemData itemData;
     public GameObject itemPrefab;
-    public GameObject[] elementsToDisable;
 }

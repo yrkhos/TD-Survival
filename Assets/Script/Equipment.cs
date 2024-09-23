@@ -78,11 +78,6 @@ public class Equipment : MonoBehaviour
 
         if (equipmentLibraryItem != null)
         {
-            for (int i = 0; i < equipmentLibraryItem.elementsToDisable.Length; i++)
-            {
-                equipmentLibraryItem.elementsToDisable[i].SetActive(true);
-            }
-
             equipmentLibraryItem.itemPrefab.SetActive(false);
         }
 
@@ -144,10 +139,6 @@ public class Equipment : MonoBehaviour
 
         if (equipmentLibraryItem != null)
         {
-            for (int i = 0; i < equipmentLibraryItem.elementsToDisable.Length; i++)
-            {
-                equipmentLibraryItem.elementsToDisable[i].SetActive(true);
-            }
 
             equipmentLibraryItem.itemPrefab.SetActive(false);
         }
@@ -236,12 +227,6 @@ public class Equipment : MonoBehaviour
                     equipedWeaponItem = itemToEquip;
                     break;
             }
-
-            for (int i = 0; i < equipmentLibraryItem.elementsToDisable.Length; i++)
-            {
-                equipmentLibraryItem.elementsToDisable[i].SetActive(false);
-            }
-
             equipmentLibraryItem.itemPrefab.SetActive(true);
 
             playerStats.currentArmorPoints += itemToEquip.armorPoints;
