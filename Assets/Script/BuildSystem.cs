@@ -73,6 +73,18 @@ public class BuildSystem : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
+            if(currentStructure.structureType == StructureType.Door && systemEnabled)
+            {
+                DisableSystem();
+            }
+            else
+            {
+                ChangeStructureType(GetStructureByType(StructureType.Door));
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
             if (currentStructure.structureType == StructureType.Stairs && systemEnabled)
             {
                 DisableSystem();
@@ -83,7 +95,7 @@ public class BuildSystem : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha3))
+        if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             if (currentStructure.structureType == StructureType.Floor && systemEnabled)
             {
@@ -269,7 +281,8 @@ public enum StructureType
 {
     Stairs,
     Wall,
-    Floor
+    Floor,
+    Door
 }
 
 [System.Serializable]

@@ -11,6 +11,7 @@ TagManager:
   - Stairs
   - Point
   - Terrain
+  - Door
   layers:
   - Default
   - TransparentFX
