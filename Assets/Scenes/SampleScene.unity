@@ -5221,6 +5221,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3019568755237715636, guid: 6bf082be317fdd94a9cee11b2ad08caf, type: 3}
   m_PrefabInstance: {fileID: 1922623407919751296}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1342016142 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5909698218228758685, guid: 6bf082be317fdd94a9cee11b2ad08caf, type: 3}
+  m_PrefabInstance: {fileID: 1922623407919751296}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1342016144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342016142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59acece7d78bb0a4e9540ecaf7a78efe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionRange: 5
+  deconstructibleLayer:
+    serializedVersion: 2
+    m_Bits: 3584
 --- !u!1 &1363261514
 GameObject:
   m_ObjectHideFlags: 0
@@ -8177,10 +8198,17 @@ PrefabInstance:
       propertyPath: thirstBarFill
       value: 
       objectReference: {fileID: 1391857227}
+    - target: {fileID: 5909698218228758685, guid: 6bf082be317fdd94a9cee11b2ad08caf, type: 3}
+      propertyPath: m_TagString
+      value: MainCamera
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5909698218228758685, guid: 6bf082be317fdd94a9cee11b2ad08caf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1342016144}
   m_SourcePrefab: {fileID: 100100000, guid: 6bf082be317fdd94a9cee11b2ad08caf, type: 3}
 --- !u!4 &1922623407919751297 stripped
 Transform:
