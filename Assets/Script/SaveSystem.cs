@@ -15,9 +15,6 @@ public class SaveSystem : MonoBehaviour
     private PlayerStats playerStats;
 
     [SerializeField]
-    private BuildSystem buildSystem;
-
-    [SerializeField]
     private MainMenu mainMenu;
 
     private void Start()
@@ -56,7 +53,6 @@ public class SaveSystem : MonoBehaviour
             currentHealth = playerStats.currentHealth,
             currentHunger = playerStats.currentHunger,
             currentThirst = playerStats.currentThirst,
-            placedStructures = buildSystem.placedStructures.ToArray()
         };
 
         string jsonData = JsonUtility.ToJson(savedData);
@@ -95,8 +91,6 @@ public class SaveSystem : MonoBehaviour
         playerStats.currentThirst = savedData.currentThirst;
         playerStats.UpdateHealthBarFill();
 
-        buildSystem.LoadStructures(savedData.placedStructures);
-
         Debug.Log("Chargement terminé");
     }
 }
@@ -114,5 +108,4 @@ public class SavedData
     public float currentHealth;
     public float currentHunger;
     public float currentThirst;
-    public PlacedStructure[] placedStructures;
 }

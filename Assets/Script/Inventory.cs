@@ -15,9 +15,6 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     private CraftingSystem craftingSystem;
 
-    [SerializeField]
-    private BuildSystem buildSystem;
-
     [Header("INVENTORY SYSTEM VARIABLES")]
 
     [SerializeField]
@@ -170,7 +167,6 @@ public class Inventory : MonoBehaviour
 
         equipment.UpdateEquipmentsDesequipButtons();
         craftingSystem.UpdateDisplayedRecipes();
-        buildSystem.UpdateDisplayedCosts();
     }
 
     public bool IsFull()
